@@ -12,10 +12,18 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    AAlert: typeof import('antdv-next')['Alert']
     AButton: typeof import('antdv-next')['Button']
     ACard: typeof import('antdv-next')['Card']
-    AInput: typeof import('antdv-next')['Input']
+    ACol: typeof import('antdv-next')['Col']
+    AConfigProvider: typeof import('antdv-next')['ConfigProvider']
+    ADivider: typeof import('antdv-next')['Divider']
+    ADropdown: typeof import('antdv-next')['Dropdown']
+    ARow: typeof import('antdv-next')['Row']
+    ASpace: typeof import('antdv-next')['Space']
+    ATooltip: typeof import('antdv-next')['Tooltip']
+    ATypographyLink: typeof import('antdv-next')['TypographyLink']
+    ATypographyText: typeof import('antdv-next')['TypographyText']
+    ATypographyTitle: typeof import('antdv-next')['TypographyTitle']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
@@ -23,10 +31,18 @@ declare module 'vue' {
 
 // For TSX support
 declare global {
-  const AAlert: typeof import('antdv-next')['Alert']
   const AButton: typeof import('antdv-next')['Button']
   const ACard: typeof import('antdv-next')['Card']
-  const AInput: typeof import('antdv-next')['Input']
+  const ACol: typeof import('antdv-next')['Col']
+  const AConfigProvider: typeof import('antdv-next')['ConfigProvider']
+  const ADivider: typeof import('antdv-next')['Divider']
+  const ADropdown: typeof import('antdv-next')['Dropdown']
+  const ARow: typeof import('antdv-next')['Row']
+  const ASpace: typeof import('antdv-next')['Space']
+  const ATooltip: typeof import('antdv-next')['Tooltip']
+  const ATypographyLink: typeof import('antdv-next')['TypographyLink']
+  const ATypographyText: typeof import('antdv-next')['TypographyText']
+  const ATypographyTitle: typeof import('antdv-next')['TypographyTitle']
   const RouterLink: typeof import('vue-router')['RouterLink']
   const RouterView: typeof import('vue-router')['RouterView']
 }

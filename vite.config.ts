@@ -9,6 +9,7 @@ import { defineConfig } from 'vite'
 // @ts-ignore
 import eslint from 'vite-plugin-eslint'
 import progress from 'vite-plugin-progress'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
 export default defineConfig({
 	plugins: [
@@ -27,6 +28,10 @@ export default defineConfig({
 		Components({
 			resolvers: [AntdvNextResolver()],
 			dts: path.resolve(__dirname, 'typings/components.d.ts')
+		}),
+		createSvgIconsPlugin({
+			iconDirs: [path.resolve(__dirname, 'src/assets/icon/svg')],
+			symbolId: 'icon-[name]'
 		})
 	],
 	resolve: {

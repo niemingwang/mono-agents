@@ -12,7 +12,7 @@ export default defineConfig([
 	// 通用配置
 	{
 		ignores,
-		files: ['**/*.{js,ts,tsx,jsx,mjs,cjs}'],
+		files: ['src/**/*.{js,ts,tsx,jsx,mjs,cjs}'],
 		extends: [eslint.configs.recommended, ...tslint.configs.recommended, eslintPluginPrettier],
 		languageOptions: {
 			ecmaVersion: 'latest', // ecma愈发支持版本
@@ -21,7 +21,7 @@ export default defineConfig([
 		},
 		rules: {
 			// 允许使用 @ts-ignore
-			'@typescript-eslint/ban-ts-comment': 'off', // ✅ 允许使用 // @ts-ignore
+			'@typescript-eslint/ban-ts-comment': 'off',
 			'no-console': 'warn',
 			'no-unused-vars': 'warn',
 			// 	对象结尾不加逗号
@@ -30,7 +30,7 @@ export default defineConfig([
 	},
 	{
 		ignores,
-		files: ['agents/**/*.vue', 'packages/**/*.vue'],
+		files: ['src/**/*.vue'],
 		extends: [...eslintPluginVue.configs['flat/recommended'], eslintPluginPrettier],
 		languageOptions: {
 			parser: vueParser,
@@ -40,6 +40,9 @@ export default defineConfig([
 			globals: {
 				...globals.browser
 			}
+		},
+		rules: {
+			'vue/multi-word-component-names': 'off'
 		}
 	}
 ])

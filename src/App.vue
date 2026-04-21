@@ -1,5 +1,15 @@
+<template>
+	<a-config-provider>
+		<router-view></router-view>
+	</a-config-provider>
+</template>
+
 <script setup lang="ts"></script>
 
-<template>
-	<h1>mono-agents</h1>
-</template>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+</style>
