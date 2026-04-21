@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import { DramaStudio, GenX } from '@/agents'
 import setupGuard from '@/router/guard.ts'
 
@@ -8,7 +8,7 @@ function getAgentList() {
 }
 
 const router = createRouter({
-	history: createWebHistory(),
+	history: createWebHashHistory(),
 	routes: [
 		{
 			path: '',

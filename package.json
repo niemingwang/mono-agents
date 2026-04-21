@@ -44,6 +44,7 @@
 		"vite-plugin-eslint": "^1.8.1",
 		"vite-plugin-progress": "^0.0.7",
 		"vite-plugin-svg-icons": "^2.0.1",
+		"vue-eslint-parser": "^10.4.0",
 		"vue-tsc": "^3.2.6"
 	},
 	"engines": {

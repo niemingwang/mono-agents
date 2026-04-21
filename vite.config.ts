@@ -12,6 +12,7 @@ import progress from 'vite-plugin-progress'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
 export default defineConfig({
+	base: '/mono-agents/',
 	plugins: [
 		vue(),
 		vueJsx(),
