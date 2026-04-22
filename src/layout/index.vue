@@ -1,7 +1,7 @@
 <template>
 	<LayoutSidebar />
 	<main
-		:style="{ marginLeft: collapsed ? '0' : '200px' }"
+		:style="{ marginLeft: mobile ? '0' : collapsed ? '0' : '200px' }"
 		class="bg-container min-h-screen transition-[margin] pos-relative border-1px border-l-solid border-split"
 	>
 		<router-view />
@@ -10,6 +10,7 @@
 
 <script setup lang="ts">
 import useCollapsed from '@/composables/use-collapsed.ts'
+import useMobile from '@/composables/use-mobile.ts'
 import LayoutSidebar from '@/layout/sidebar/index.vue'
 
 defineOptions({
@@ -17,6 +18,7 @@ defineOptions({
 })
 
 const { collapsed } = useCollapsed()
+const { mobile } = useMobile()
 </script>
 
 <style scoped></style>

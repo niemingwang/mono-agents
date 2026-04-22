@@ -1,19 +1,40 @@
 <template>
-	<Transition name="fade">
-		<aside v-show="!collapsed" class="w-200px p-2 fixed top-0 left-0 bottom-0 flex flex-col bg-elevated">
+	<DefineTemplate>
+		<aside class="w-200px h-full flex flex-col bg-elevated">
 			<AgentSwitch :title="navMeta.title" />
-			<nav class="flex-1">
-				<component :is="nav" />
+			<nav class="flex-1 overflow-hidden">
+				<component :is="nav" class="p-2" />
 			</nav>
-			<UserAvatar class="h-52px" />
+			<UserAvatar />
 		</aside>
+	</DefineTemplate>
+
+	<a-drawer
+		v-if="mobile"
+		:open="!collapsed"
+		:styles="stylesObject"
+		:size="200"
+		:closable="false"
+		placement="left"
+		@close="toggleCollapsed(true)"
+	>
+		<ReuseTemplate />
+	</a-drawer>
+
+	<Transition v-else name="fade">
+		<ReuseTemplate v-show="!collapsed" class="fixed left-0 top-0 right-0" />
 	</Transition>
 </template>
 
 <script setup lang="ts">
+import { createReusableTemplate } from '@vueuse/core'
+import type { DrawerProps } from 'antdv-next'
 import useCollapsed from '@/composables/use-collapsed.ts'
+import useMobile from '@/composables/use-mobile.ts'
 import AgentSwitch from '@/layout/sidebar/agent-switch.vue'
 import UserAvatar from '@/layout/sidebar/user-avatar.vue'
+
+const [DefineTemplate, ReuseTemplate] = createReusableTemplate()
 
 defineOptions({ name: 'LayoutSidebar' })
 
@@ -23,7 +44,14 @@ const navMeta = computed(() => route.matched[1].meta)
 
 const nav = computed(() => navMeta.value.nav || null)
 
-const { collapsed } = useCollapsed()
+const { mobile } = useMobile()
+const { collapsed, toggleCollapsed } = useCollapsed()
+
+const stylesObject: DrawerProps['styles'] = {
+	body: {
+		padding: '0'
+	}
+}
 </script>
 
 <style scoped>

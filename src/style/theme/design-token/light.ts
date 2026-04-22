@@ -12,7 +12,7 @@ const lightTheme: ThemeConfig = {
 			paddingInline: 16
 		},
 		Dropdown: {
-			motionDurationMid: '0.08s',
+			motionDurationMid: '0.12s',
 			borderRadiusSM: 8,
 			controlItemBgActive: 'rgba(0,0,0,0)'
 		},

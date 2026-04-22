@@ -15,11 +15,16 @@
 
 <script setup lang="ts">
 import type { MenuItemType } from 'antdv-next'
+import useCollapsed from '@/composables/use-collapsed.ts'
+import useMobile from '@/composables/use-mobile.ts'
 import SvgIcon from '@/ui/svg-icon/src/index.vue'
 
 defineOptions({ name: 'DramaStudioMenu' })
 
 const route = useRoute()
+
+const { mobile } = useMobile()
+const { toggleCollapsed } = useCollapsed()
 
 const selectedKeys = ref([route.name as string])
 const items: MenuItemType[] = [
@@ -44,7 +49,11 @@ const items: MenuItemType[] = [
 	}
 ]
 
-function handleClick() {}
+function handleClick() {
+	if (mobile.value) {
+		toggleCollapsed(true)
+	}
+}
 </script>
 
 <style scoped></style>

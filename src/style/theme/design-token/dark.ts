@@ -13,10 +13,13 @@ const darkTheme: ThemeConfig = {
 	},
 	components: {
 		Button: {
-			paddingInline: 16
+			paddingInline: 16,
+			primaryShadow: 'transparent',
+			defaultShadow: 'transparent'
 		},
 		Dropdown: {
-			motionDurationMid: '0.08s',
+			boxShadowSecondary: '0 0 0 1px rgba(255,255,255,0.16)',
+			motionDurationMid: '0.12s',
 			borderRadiusSM: 8,
 			controlItemBgActive: 'rgba(0,0,0,0)'
 		},
