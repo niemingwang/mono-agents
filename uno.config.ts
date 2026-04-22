@@ -1,6 +1,16 @@
-import { defineConfig } from 'unocss'
+import { presetAntd } from '@antdv-next/unocss'
+import { defineConfig, presetAttributify, presetWind3 } from 'unocss'
 
 export default defineConfig({
+	presets: [
+		presetAttributify(),
+		presetWind3(),
+		presetAntd({
+			prefix: 'a',
+			allowUnprefixed: true,
+			antPrefix: 'ant'
+		})
+	]
 	// // ...UnoCSS options
 	// theme: {
 	//   colors: {

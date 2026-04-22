@@ -5,6 +5,7 @@ import { setupRouter } from '@/router'
 import { setupPinia } from '@/store'
 // @ts-ignore
 import 'virtual:svg-icons-register'
+import '@/style/index.css'
 
 function setup() {
 	const app = createApp(App)

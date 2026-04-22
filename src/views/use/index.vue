@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full h-screen p-4 overflow-auto bg-#f9f9f9 flex justify-center">
+	<div class="bg-container w-full h-screen p-4 overflow-auto flex justify-center">
 		<a-space class="w-[800px] max-w-full" direction="vertical" wrap>
 			<a-typography-title :level="3" class="font-500!">Agents</a-typography-title>
 			<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">

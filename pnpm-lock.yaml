@@ -33,6 +33,9 @@ importers:
       '@antdv-next/auto-import-resolver':
         specifier: ^1.0.7
         version: 1.0.7(unplugin-vue-components@32.0.0(vue@3.5.32(typescript@6.0.3)))
+      '@antdv-next/unocss':
+        specifier: ^1.0.3
+        version: 1.0.3(unocss@66.6.8(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(vite@8.0.9(@types/node@24.12.2)(jiti@2.6.1)(yaml@2.8.3)))
       '@eslint/js':
         specifier: ^10.0.1
         version: 10.0.1(eslint@10.2.1(jiti@2.6.1))
@@ -143,6 +146,11 @@ packages:
     resolution: {integrity: sha512-SCPe/otLTmOEVoAdrZ/fn5pr1wlA1Tbzhk908gWPDnjSLEPIcv4n0Feh416RKj1oe8PKbPIC95BH+HaBXybojg==}
     peerDependencies:
       vue: '>=3.2.0'
+
+  '@antdv-next/unocss@1.0.3':
+    resolution: {integrity: sha512-ifnnJpISZg0Vg/q2DWMNHpJt16MHy+6YAMXtYdglutIZ5IEOldJ0GvoYsRqTxXjJfAQnSeG03fc4RSLgjLm9gQ==}
+    peerDependencies:
+      unocss: '>=66.0.0'
 
   '@antfu/install-pkg@1.1.0':
     resolution: {integrity: sha512-MGQsmw10ZyI+EJo45CdSER4zEb+p31LpDAFp2Z3gkSd1yqVZGi0Ebx++YTEMonJy4oChEMLsxZ64j8FH6sSqtQ==}
@@ -3114,6 +3122,10 @@ snapshots:
       '@ant-design/icons-svg': 4.4.2
       '@v-c/util': 1.0.19(vue@3.5.32(typescript@6.0.3))
       vue: 3.5.32(typescript@6.0.3)
+
+  '@antdv-next/unocss@1.0.3(unocss@66.6.8(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(vite@8.0.9(@types/node@24.12.2)(jiti@2.6.1)(yaml@2.8.3)))':
+    dependencies:
+      unocss: 66.6.8(@emnapi/core@1.9.2)(@emnapi/runtime@1.9.2)(vite@8.0.9(@types/node@24.12.2)(jiti@2.6.1)(yaml@2.8.3))
 
   '@antfu/install-pkg@1.1.0':
     dependencies:

@@ -1,10 +1,16 @@
 <template>
-	<a-config-provider>
-		<router-view></router-view>
+	<a-config-provider :theme="themeToken">
+		<a-app>
+			<router-view></router-view>
+		</a-app>
 	</a-config-provider>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import useTheme from '@/style/theme'
+
+const { themeToken } = useTheme()
+</script>
 
 <style>
 * {

@@ -12,9 +12,14 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AApp: typeof import('antdv-next')['App']
+    AButton: typeof import('antdv-next')['Button']
     ACard: typeof import('antdv-next')['Card']
     AConfigProvider: typeof import('antdv-next')['ConfigProvider']
     ADivider: typeof import('antdv-next')['Divider']
+    AMenu: typeof import('antdv-next')['Menu']
+    ARadioButton: typeof import('antdv-next')['RadioButton']
+    ARadioGroup: typeof import('antdv-next')['RadioGroup']
     ASpace: typeof import('antdv-next')['Space']
     ATypographyLink: typeof import('antdv-next')['TypographyLink']
     ATypographyText: typeof import('antdv-next')['TypographyText']
@@ -26,9 +31,14 @@ declare module 'vue' {
 
 // For TSX support
 declare global {
+  const AApp: typeof import('antdv-next')['App']
+  const AButton: typeof import('antdv-next')['Button']
   const ACard: typeof import('antdv-next')['Card']
   const AConfigProvider: typeof import('antdv-next')['ConfigProvider']
   const ADivider: typeof import('antdv-next')['Divider']
+  const AMenu: typeof import('antdv-next')['Menu']
+  const ARadioButton: typeof import('antdv-next')['RadioButton']
+  const ARadioGroup: typeof import('antdv-next')['RadioGroup']
   const ASpace: typeof import('antdv-next')['Space']
   const ATypographyLink: typeof import('antdv-next')['TypographyLink']
   const ATypographyText: typeof import('antdv-next')['TypographyText']

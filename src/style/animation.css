@@ -1,0 +1,107 @@
+/* 向下弹出（bottom 方向：从上往下）*/
+@keyframes antSlideUpIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(-2px);
+    transform-origin: 0 0
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    transform-origin: 0 0
+  }
+}
+
+@keyframes antSlideUpOut {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    transform-origin: 0 0
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.92) translateY(-2px);
+    transform-origin: 0 0
+  }
+}
+
+/*!* 向上弹出（top 方向：从下往上）*!*/
+@keyframes antSlideDownIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(2px);
+    transform-origin: 0 100%
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    transform-origin: 0 100%
+  }
+}
+
+@keyframes antSlideDownOut {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    transform-origin: 0 100%
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.92) translateY(2px);
+    transform-origin: 0 100%
+  }
+}
+
+/* 向右弹出（right 方向：从左往右）*/
+@keyframes antSlideLeftIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateX(-2px);
+    transform-origin: 100% 0
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+    transform-origin: 100% 0
+  }
+}
+
+@keyframes antSlideLeftOut {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+    transform-origin: 100% 0
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.92) translateX(-2px);
+    transform-origin: 100% 0
+  }
+}
+
+/* 向左弹出（left 方向：从右往左）*/
+@keyframes antSlideRightIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateX(2px);
+    transform-origin: 0 100%
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+    transform-origin: 0 100%
+  }
+}
+
+@keyframes antSlideRightOut {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateX(0);
+    transform-origin: 0 100%
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.92) translateX(2px);
+    transform-origin: 0 100%
+  }
+}

@@ -1,19 +1,22 @@
 <template>
-	<div class="flex h-screen">
-		<LayoutSidebar />
-		<a-divider vertical class="m-0 h-full" />
-		<main class="flex-1">
-			<router-view></router-view>
-		</main>
-	</div>
+	<LayoutSidebar />
+	<main
+		:style="{ marginLeft: collapsed ? '0' : '200px' }"
+		class="bg-container min-h-screen transition-[margin] pos-relative border-1px border-l-solid border-split"
+	>
+		<router-view />
+	</main>
 </template>
 
 <script setup lang="ts">
+import useCollapsed from '@/composables/use-collapsed.ts'
 import LayoutSidebar from '@/layout/sidebar/index.vue'
 
 defineOptions({
 	name: 'AppMain'
 })
+
+const { collapsed } = useCollapsed()
 </script>
 
 <style scoped></style>
