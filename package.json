@@ -11,6 +11,7 @@
 		"lint:prettier": "prettier --write \"**/*.{js,ts,mjs,cjs,json,tsx,css,less,scss,vue,html,md}\""
 	},
 	"dependencies": {
+		"@antdv-next/icons": "^1.0.6",
 		"@vueuse/core": "^14.2.1",
 		"antdv-next": "^1.2.1",
 		"axios": "^1.15.1",

@@ -9,12 +9,15 @@ const lightTheme: ThemeConfig = {
 	},
 	components: {
 		Button: {
-			paddingInline: 16
+			paddingInline: 16,
+			colorFill: 'rgba(0,0,0,0.06)'
 		},
 		Dropdown: {
 			motionDurationMid: '0.12s',
 			borderRadiusSM: 8,
-			controlItemBgActive: 'rgba(0,0,0,0)'
+			controlItemBgActive: 'rgba(0,0,0,0)',
+			controlItemBgActiveHover: 'rgba(0,0,0,0.06)',
+			colorPrimary: '#333'
 		},
 		Select: {
 			motionDurationMid: '0.08s',

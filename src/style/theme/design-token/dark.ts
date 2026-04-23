@@ -15,13 +15,16 @@ const darkTheme: ThemeConfig = {
 		Button: {
 			paddingInline: 16,
 			primaryShadow: 'transparent',
-			defaultShadow: 'transparent'
+			defaultShadow: 'transparent',
+			colorFill: 'rgba(255,255,255,0.16)'
 		},
 		Dropdown: {
 			boxShadowSecondary: '0 0 0 1px rgba(255,255,255,0.16)',
 			motionDurationMid: '0.12s',
 			borderRadiusSM: 8,
-			controlItemBgActive: 'rgba(0,0,0,0)'
+			controlItemBgActive: 'rgba(0,0,0,0)',
+			controlItemBgActiveHover: 'rgba(255,255,255,0.16)',
+			colorPrimary: '#fff'
 		},
 		Select: {
 			motionDurationMid: '0.08s',

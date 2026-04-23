@@ -1,5 +1,5 @@
 <template>
-	<a-config-provider :wave="{ disabled: true }" :theme="themeToken">
+	<a-config-provider :wave="{ disabled: true }" :button="{ autoInsertSpace: false }" :theme="themeToken">
 		<a-app>
 			<router-view></router-view>
 		</a-app>
