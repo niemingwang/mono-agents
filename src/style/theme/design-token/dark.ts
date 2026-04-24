@@ -19,7 +19,7 @@ const darkTheme: ThemeConfig = {
 			colorFill: 'rgba(255,255,255,0.16)'
 		},
 		Dropdown: {
-			boxShadowSecondary: '0 0 0 1px rgba(255,255,255,0.16)',
+			// boxShadowSecondary: '0 0 0 1px rgba(255,255,255,0.16)',
 			motionDurationMid: '0.12s',
 			borderRadiusSM: 8,
 			controlItemBgActive: 'rgba(0,0,0,0)',
@@ -27,6 +27,7 @@ const darkTheme: ThemeConfig = {
 			colorPrimary: '#fff'
 		},
 		Select: {
+			colorPrimary: 'rgba(255,255,255,0.85)',
 			motionDurationMid: '0.08s',
 			controlItemBgActive: 'rgba(0,0,0,0)',
 			borderRadiusSM: 8

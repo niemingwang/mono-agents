@@ -20,6 +20,7 @@ const lightTheme: ThemeConfig = {
 			colorPrimary: '#333'
 		},
 		Select: {
+			colorPrimary: 'rgba(51,51,51,0.9)',
 			motionDurationMid: '0.08s',
 			controlItemBgActive: 'rgba(0,0,0,0)',
 			borderRadiusSM: 8

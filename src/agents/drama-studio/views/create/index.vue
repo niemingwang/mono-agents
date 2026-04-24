@@ -8,28 +8,27 @@
 	<br />
 	<br />
 	<br />
-	<dropdown-select v-model="val" :items="items">{{ val }}</dropdown-select>
+	<common-select v-model="val" mode="tags" variant="borderless" :items="items" />
 </template>
 
 <script setup lang="ts">
-import type { MenuItemType } from 'antdv-next'
 import useCollapsed from '@/composables/use-collapsed.ts'
 import useTheme from '@/style/theme'
-import DropdownSelect from '@/ui/dropdown-select/src/index.vue'
+import CommonSelect from '@/ui/common-select/src/index.vue'
 
 defineOptions({ name: 'Create' })
 
 const { setTheme, ThemeTypes } = useTheme()
 const { collapsed, toggleCollapsed } = useCollapsed()
 
-const val = ref('GPT-5.4')
-const items: MenuItemType[] = [
+const val = ref([])
+const items = [
 	{
-		key: 'GPT-5.4',
+		value: '1',
 		label: 'GPT-5.4'
 	},
 	{
-		key: 'GPT-5.3-Codex',
+		value: '2',
 		label: 'GPT-5.3-Codex'
 	}
 ]
